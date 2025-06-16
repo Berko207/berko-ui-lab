@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2025 AI Dev Design System */
+
+@layer base {
+  :root {
+    --background: 220 25% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 25% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 25% 10%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 263 70% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 12%;
+    --input: 220 25% 12%;
+    --ring: 263 70% 65%;
+
+    --radius: 0.75rem;
+
+    --ai-purple: 263 70% 65%;
+    --ai-blue: 220 70% 65%;
+    --ai-cyan: 180 70% 65%;
+    --ai-glow: 263 70% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    background: linear-gradient(135deg, hsl(220, 25%, 6%) 0%, hsl(240, 25%, 8%) 100%);
+    min-height: 100vh;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Glowing effects */
+  .glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+
+  /* Animated gradient text */
+  .gradient-text {
+    background: linear-gradient(45deg, hsl(var(--ai-purple)), hsl(var(--ai-blue)), hsl(var(--ai-cyan)));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Code syntax highlighting */
+  .syntax-keyword { color: hsl(var(--ai-purple)); }
+  .syntax-string { color: hsl(var(--ai-cyan)); }
+  .syntax-type { color: hsl(var(--ai-blue)); }
+  .syntax-comment { color: hsl(var(--muted-foreground)); }
+}
