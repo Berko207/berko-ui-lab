@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# Environment files
+*.env
+
 # Python envs & weights
 venv/
 *.pt
