@@ -1,0 +1,24 @@
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python envs & weights
+venv/
+*.pt
+*.dylib
+*.so
+
+# Node modules
+node_modules/
+
+# Editor folders
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# System folders
+Desktop/
+Applications/
